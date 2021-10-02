@@ -12,5 +12,5 @@ def main():
 @app.get("/getjson")
 def get_json(data: str):
     p = Processor(data)
-    p.parse_init_data()
-    return p.variations_list
+    # p.parse_init_data()
+    return p.variations_dict
