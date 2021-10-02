@@ -4,6 +4,14 @@ from scipy.stats import norm
 
 class Processor:
     def __init__(self, data: str) -> None:
+        """
+        Parse string GET argument to dict of values
+        and make calculations like z-score and p-value
+
+        Args:
+            data (str): data in format "size:conv;size2:conv2;..."
+            example: "1000:150;1000:140;1000:160;100:16"
+        """
         self.init_data = data
         self.variations_list = self._parse_init_data()
         self.variations_dict = self.to_dict()
