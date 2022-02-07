@@ -21,7 +21,7 @@ class Processor:
 
         lst = [item.split(":") for item in data.split(";")]
         for i, l in enumerate(lst):
-            lst[i] = [int(item) for item in l]
+            lst[i] = [float(item) for item in l]
         return lst
 
     def to_dict(self) -> dict:
